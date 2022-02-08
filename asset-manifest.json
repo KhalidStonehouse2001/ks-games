@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/ks-games/src/static/css/main.af0ffefc.css",
-    "main.js": "/ks-games/src/static/js/main.3e33286b.js",
-    "index.html": "/ks-games/src/index.html",
-    "main.af0ffefc.css.map": "/ks-games/src/static/css/main.af0ffefc.css.map",
-    "main.3e33286b.js.map": "/ks-games/src/static/js/main.3e33286b.js.map"
+    "main.css": "/ks-games/static/css/main.af0ffefc.css",
+    "main.js": "/ks-games/static/js/main.3e33286b.js",
+    "index.html": "/ks-games/index.html",
+    "main.af0ffefc.css.map": "/ks-games/static/css/main.af0ffefc.css.map",
+    "main.3e33286b.js.map": "/ks-games/static/js/main.3e33286b.js.map"
   },
   "entrypoints": [
     "static/css/main.af0ffefc.css",
