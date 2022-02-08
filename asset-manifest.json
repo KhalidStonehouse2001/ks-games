@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ks-games/static/css/main.af0ffefc.css",
+    "main.js": "/ks-games/static/js/main.3e33286b.js",
+    "index.html": "/ks-games/index.html",
+    "main.af0ffefc.css.map": "/ks-games/static/css/main.af0ffefc.css.map",
+    "main.3e33286b.js.map": "/ks-games/static/js/main.3e33286b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af0ffefc.css",
+    "static/js/main.3e33286b.js"
+  ]
+}
