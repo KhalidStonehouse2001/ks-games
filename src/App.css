@@ -261,4 +261,51 @@
 }
 
 
+.comment-link {
+    text-decoration: none;
+}
+
+/* .form{
+    width: 400%;
+    height: 50%;
+} */
+
+.form-div{
+    font-family: 'Indie Flower', cursive;
+
+    margin: 175px auto;
+    background-color: rgba(224, 224, 224, 0.5);
+    width: 40%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px black;
+    text-align: center;
+
+    
+}
+.username-input{
+    border-radius: 4px;
+    margin-bottom: 19px;
+    margin-top: 10px;
+}
+.body-input{
+    margin-top: 10px;
+
+    border-radius: 4px;
+
+}
+.username-input:hover{
+    border: 2px solid #1876D1;
+
+}
+
+.body-input:hover{
+    border: 2px solid #1876D1;
+
+}
+.post-comment-title{
+    margin: 20px;
+}
+
+
 

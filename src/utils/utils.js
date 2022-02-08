@@ -47,3 +47,15 @@ export const getSingleComment = (id) => {
 			console.log(err);
 		});
 };
+
+export const postComment = (comment, id) => {
+	console.log(id, comment);
+	return gamesApi
+		.post(`/reviews/${id}/comments`, comment)
+		.then(({ data }) => {
+			return data.comment;
+		})
+		.catch((err) => {
+			console.log(err.response);
+		});
+};

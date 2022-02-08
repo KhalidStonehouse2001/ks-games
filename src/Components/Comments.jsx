@@ -27,7 +27,7 @@ function Comments() {
              </li>
          )
         })}
-        <Link to='/newcomment'>
+        <Link className='comment-link' to={`reviews/${review_id}/newcomments`}>
         <Button  className='post-comment-btn' variant='outlined'>Post a Comment</Button>
         </Link>
         </ul>

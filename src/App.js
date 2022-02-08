@@ -19,7 +19,10 @@ function App() {
 				<Route path='/reviews/:review_id' element={<SingleReview />} />
 				<Route path='/login' element={<Login />} />
 				<Route path='/reviews/:review_id/comments' element={<Comments />} />
-				<Route path='/newcomment' element={<PostComment />} />
+				<Route
+					path='/reviews/:review_id/comments/reviews/:review_id/newcomments'
+					element={<PostComment />}
+				/>
 			</Routes>
 		</BrowserRouter>
 	);

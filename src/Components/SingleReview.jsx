@@ -39,7 +39,7 @@ getSingleReview(review_id).then((res) => {
               <p className='review-p-header'>{'Category: '}</p>
               <p className='cat'>{review.category}</p>
               </div>
-              <Link to={`/reviews/${review.review_id}/comments`}>
+              <Link className='comment-link'  to={`/reviews/${review.review_id}/comments`}>
               <Button variant="outlined">Load Comments</Button>
               </Link>
           </li>
