@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+.link {
+    text-decoration: none;
+    color: white;
+    margin: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-title {
+    display: flex;
+    justify-content: center;
+    margin: 35px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+.reviews_card > h1 {
+    display: flex;
+    justify-content: center;
+    margin:50px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.reviews_card{
+    box-shadow: 0px 0px 6px black;
+
+    background-color: rgba(219, 219, 219, 0.5);
+    margin: auto;
+    width: 60%;
+    border-radius: 40px;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+.reviews-list {
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.reviews-list > h5 {
+    margin-top: 35px;
+}
+
+.review-title{
+    margin: auto;
+    text-align: center;
+}
+
+.loading{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.review-img {
+    border-radius: 20px;
+}
+
+
+/* .categories-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+} */
+.category-title{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+.category-list{
+    box-shadow: 0px 0px 6px black;
+    padding: 30px;
+    list-style: none;
+    border: 3px solid black;
+    width: 60%;
+    margin: auto;
+}
+
+
+.category-slug{
+    text-align: center;
+}
+
+.category-text{
+    text-align: center;
+}
+
+.logo {
+   color: white;
+   max-height: 100px;
+    width: auto;
+}
+
+
+.list-link {
+    text-decoration: none;
+    color: black;
+}
+
+
+.review-list{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-list > img{
+    width: 45%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px black;
+
+}
+
+.review-body{
+    width: 50%;
+    text-align: center;
+}
+
+.review-p-header{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.category-link {
+    text-decoration: none;
+    color: black;
+}
+
+.category-link:hover{
+    color: rgb(19, 100, 175);
+
 }
