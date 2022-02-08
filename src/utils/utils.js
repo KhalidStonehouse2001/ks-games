@@ -36,3 +36,14 @@ export const getSingleReview = (id) => {
 			console.log(err);
 		});
 };
+
+export const getSingleComment = (id) => {
+	return gamesApi
+		.get(`/reviews/${id}/comments`)
+		.then(({ data }) => {
+			return data.comments;
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+};

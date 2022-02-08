@@ -10,19 +10,19 @@ function NavBar() {
     <Navbar bg='dark'variant="dark">
         <Container>
       <DiAtom className='logo'/>
-      <Navbar.Brand>Games Arena</Navbar.Brand>
+      <Navbar.Brand className='arena'>Games Arena</Navbar.Brand>
       <Nav className="me-auto">
         <Link className='link' to='/'>
-        <Nav>Home</Nav>
+        <Nav className='nav'>Home</Nav>
         </Link>
         <Link className='link' to='/categories'>
-        <Nav>Categories</Nav>
+        <Nav className='nav'>Categories</Nav>
         </Link>
         <Link className='link' to='/aboutus'>
-        <Nav>About us</Nav>
+        <Nav className='nav'>About us</Nav>
         </Link>
         <Link className='link' to='/login'>
-        <Nav>Login</Nav>
+        <Nav className='nav'>Login</Nav>
         </Link>
       </Nav>
       </Container>

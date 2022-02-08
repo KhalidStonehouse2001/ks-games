@@ -1,22 +1,54 @@
+
+
 .link {
     text-decoration: none;
     color: white;
     margin: 5px;
 }
 
+.underline {
+    border: 2px solid black;
+    margin-top: 20px;
+    width: 120%;
+}
+.link:hover {
+    color: black;
+}
+
 .home-title {
+    font-family: 'Indie Flower', cursive;
     display: flex;
     justify-content: center;
     margin: 35px;
 
 }
+.owners-div{
+    display: flex;
+    margin: 20px;
+}
 
+.designer{
+    margin: 12px;
+}
 
+.owner{
+    margin: 12px;
+}
+
+.bottom-container {
+    display: flex;
+    margin: 20px;
+}
+.cat{
+    margin: 12px;
+}
 
 .reviews_card > h1 {
+    font-family: 'Indie Flower', cursive;
+
     display: flex;
     justify-content: center;
-    margin:50px;
+    margin-top: 10px;
 
 }
 
@@ -53,7 +85,8 @@
     font-size: 3rem;
     display: flex;
     justify-content: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Indie Flower', cursive;
+    margin: 100px;
 }
 
 .review-img {
@@ -69,20 +102,21 @@
 } */
 .category-title{
     display: flex;
+    font-family: 'Indie Flower', cursive;
+
     justify-content: center;
     margin: 20px;
 }
 
 
 .category-list{
-    box-shadow: 0px 0px 6px black;
+    box-shadow: 0px 0px 4px black;
     padding: 30px;
     list-style: none;
     border: 3px solid black;
     width: 60%;
     margin: auto;
 }
-
 
 .category-slug{
     text-align: center;
@@ -94,7 +128,7 @@
 
 .logo {
    color: white;
-   max-height: 100px;
+   height: 60px;
     width: auto;
 }
 
@@ -104,8 +138,12 @@
     color: black;
 }
 
+.list-link:hover{
+    color: black;
+}
 
 .review-list{
+    
     margin-top: 40px;
     display: flex;
     justify-content: center;
@@ -113,6 +151,10 @@
     align-items: center;
 }
 
+.review-list > h3 {
+    font-family: 'Indie Flower', cursive;
+
+}
 .review-list > img{
     width: 45%;
     border-radius: 20px;
@@ -120,12 +162,21 @@
 
 }
 
+
+
 .review-body{
-    width: 50%;
+    
+    width: 40%;
     text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(207, 211, 209);
+    box-shadow: 0px 0px 6px black;
+
 }
 
 .review-p-header{
+    margin: 10px;
     font-weight: bold;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -133,10 +184,81 @@
 
 .category-link {
     text-decoration: none;
-    color: black;
+    color: rgb(36, 35, 35);
 }
 
 .category-link:hover{
-    color: rgb(19, 100, 175);
+    color: rgb(14, 13, 13)
 
 }
+
+.login-title{
+    font-family: 'Indie Flower', cursive;
+
+    margin: 20px;
+}
+
+.form{
+    margin: 20px;
+    width: 50%;
+}
+
+.arena{
+    margin: 20px;
+}
+.nav{
+   margin-right: 10px;
+}
+
+.votes-btn{
+    border-radius: 10px;
+    background-color: white;
+}
+
+.votes-btn:hover{
+    box-shadow: 0px 0px 3px black;
+
+}
+
+.comments-p-tag{
+    text-align: right;
+   
+    margin-top: 5px;
+}
+
+.votes-p-tag{
+    margin-top: -39px;
+}
+
+.comment-btn {
+    border-radius: 10px;
+    background-color: rgb(74, 162, 212);
+}
+
+.comments-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+
+
+.comments-container > h1 {   
+     font-family: 'Indie Flower', cursive;
+
+    text-align: center;
+}
+
+.comments-list {
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px black;
+    padding: 20px;
+    list-style-type: none;
+    background-color: rgb(204, 204, 204);
+    margin: 20px;
+}
+
+
+
