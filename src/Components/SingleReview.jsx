@@ -10,18 +10,14 @@ function SingleReview() {
 getSingleReview(review_id).then((res) => {
     setReview(res)
 })
-
-
 }, [review_id])
-// const incVotes = () => {
-//     return review[0].votes += 1
-// }
+
   return (
     <div>
         <ul>
        
       {review.map((review) => {
-          return <li className='review-list'>
+          return <li key={review.review_id}className='review-list'>
               <h3 className='review-title'>{review.title}</h3>
               <div className='underline'></div>
               <div className='owners-div'>

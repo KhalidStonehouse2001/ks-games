@@ -17,9 +17,9 @@ function Categories() {
     <h1 className='category-title'>Categories</h1>
     {categories.map((category) => {
       return (
-        <ul>
-        <Link className='category-link' to={`/reviews?category=${category.slug}`}>
-        <li key={category.slug} className='category-list'>
+        <ul key={category.slug}>
+        <Link  className='category-link' to={`/reviews?category=${category.slug}`}>
+        <li  className='category-list'>
           <h4 className='category-slug'>{category.slug}</h4>
           <h6 className='category-text'>{category.description}</h6>
         </li>
@@ -28,6 +28,7 @@ function Categories() {
       )
     })}
     </div>
+    
   )
 }
 

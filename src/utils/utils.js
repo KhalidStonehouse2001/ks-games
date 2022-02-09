@@ -4,9 +4,18 @@ const gamesApi = axios.create({
 	baseURL: 'https://khalid-boardgame-app.herokuapp.com/api',
 });
 
-export const getReviews = () => {
+export const getReviews = (category) => {
+	// if (category) {
+	// 	return gamesApi.get(`/reviews?category=${category}`).then(({ data }) => {
+	// 		console.log(data);
+	// 	});
+
 	return gamesApi
-		.get('/reviews')
+		.get('/reviews', {
+			params: {
+				category: category,
+			},
+		})
 		.then(({ data }) => {
 			return data.reviews;
 		})

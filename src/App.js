@@ -8,6 +8,7 @@ import SingleReview from './Components/SingleReview';
 import Login from './Components/Login';
 import Comments from './Components/Comments';
 import PostComment from './Components/PostComment';
+import Aboutus from './Components/Aboutus';
 function App() {
 	return (
 		<BrowserRouter>
@@ -19,6 +20,7 @@ function App() {
 				<Route path='/reviews/:review_id' element={<SingleReview />} />
 				<Route path='/login' element={<Login />} />
 				<Route path='/reviews/:review_id/comments' element={<Comments />} />
+				<Route path='/aboutus' element={<Aboutus />} />
 				<Route
 					path='/reviews/:review_id/comments/reviews/:review_id/newcomments'
 					element={<PostComment />}
