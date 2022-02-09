@@ -68,3 +68,14 @@ export const postComment = (comment, id) => {
 			console.log(err.response);
 		});
 };
+
+export const getUser = (username) => {
+	return gamesApi
+		.get(`users/${username}`)
+		.then(({ data }) => {
+			return data.user;
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+};
