@@ -4,18 +4,14 @@ const gamesApi = axios.create({
 	baseURL: 'https://khalid-boardgame-app.herokuapp.com/api',
 });
 
-export const getReviews = (category) => {
-	// if (category) {
-	// 	return gamesApi.get(`/reviews?category=${category}`).then(({ data }) => {
-	// 		console.log(data);
-	// 	});
+export const getReviews = (category, sort_by, order) => {
+	let path = `/reviews?limit=100`;
+	if (category) path += `&category=${category}`;
 
+	if (sort_by) path += `&sort_by=${sort_by}`;
+	if (order) path += `&order=${order}`;
 	return gamesApi
-		.get('/reviews', {
-			params: {
-				category: category,
-			},
-		})
+		.get(path)
 		.then(({ data }) => {
 			return data.reviews;
 		})
@@ -78,4 +74,10 @@ export const getUser = (username) => {
 		.catch((err) => {
 			console.log(err);
 		});
+};
+
+export const patchReviewById = (id) => {
+	return gamesApi.patch(`reviews/${id}`, { inc_votes: 1 }).then(({ data }) => {
+		return data.review;
+	});
 };

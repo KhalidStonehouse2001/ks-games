@@ -12,6 +12,7 @@ import PostComment from './Components/PostComment';
 import Aboutus from './Components/Aboutus';
 import { UserContext } from './Contexts/User';
 import Profile from './Components/Profile';
+import DeleteComment from './Components/DeleteComment';
 function App() {
 	const [user, setUser] = useState(null);
 	return (
@@ -19,13 +20,15 @@ function App() {
 			<BrowserRouter>
 				<NavBar />
 				<Routes>
-					<Route path='/' element={<Homepage />} />
+					<Route path='/' element={<Login />} />
+					<Route path='/home' element={<Homepage />} />
+					<Route path='/login' element={<Login />} />
 					<Route path='/categories' element={<Categories />} />
 					<Route path='/reviews' element={<Reviews />} />
 					<Route path='/reviews/:review_id' element={<SingleReview />} />
-					<Route path='/login' element={<Login />} />
 					<Route path='/reviews/:review_id/comments' element={<Comments />} />
 					<Route path='/aboutus' element={<Aboutus />} />
+					<Route path='/delete' element={<DeleteComment />} />
 					<Route path='/profile/:username' element={<Profile />} />
 					<Route
 						path='/reviews/:review_id/comments/reviews/:review_id/newcomments'

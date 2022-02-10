@@ -1,37 +1,49 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import {Navbar, Container, Nav } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { DiAtom } from "react-icons/di";
-
+import { GiCrossedSwords } from "react-icons/gi";
+import {CNavbar,CNavbarNav, CCollapse, CContainer, CNavItem, CNavLink, CNavbarBrand, CNavbarToggler} from '@coreui/react'
 function NavBar() {
-  return (
-    <>
-    <Navbar bg='dark'variant="dark">
-        <Container>
-      <DiAtom className='logo'/>
-      <Navbar.Brand className='arena'>Games Arena</Navbar.Brand>
-      <Nav className="me-auto">
-        <Link className='link' to='/'>
-        <Nav className='nav'>Home</Nav>
-        </Link>
-        <Link className='link' to='/categories'>
-        <Nav className='nav'>Categories</Nav>
-        </Link>
-        <Link className='link' to='/aboutus'>
-        <Nav className='nav'>About us</Nav>
-        </Link>
-        <Link className='link' to='/login'>
-        <Nav className='nav'>Login</Nav>
-        </Link>
-      </Nav>
-      </Container>
-    </Navbar>
 
-
+  const [visible, setVisible] = useState(false)
+return (
+  <>
+    <CNavbar expand="lg" colorScheme="dark" className="bg-dark">
+      <CContainer fluid>
+        <GiCrossedSwords className='logo'/>
+        <CNavbarBrand>Games Arena</CNavbarBrand>
+        <CCollapse className="navbar-collapse" visible={visible}>
+          <CNavbarNav>
+            <CNavItem>
+              <CNavLink  active>
+            <Link className='link' to='/home'>
+                Home
+              </Link>
+              </CNavLink>
+            </CNavItem>
+            <CNavItem>
+              <CNavLink  active> <Link className='link' to='/categories'>
+            Categories </Link>
+            </CNavLink>
+              
+            </CNavItem>
+            <CNavItem>
+              <CNavLink  active>
+                <Link className='link' to='/aboutus'>
+                  About us </Link> </CNavLink> 
+            </CNavItem>
+            <CNavItem>
+              <CNavLink  active >
+              <Link className='link' to='/login'>
+                Login </Link>
+              </CNavLink>
+            </CNavItem>
+          </CNavbarNav>
+        </CCollapse>
+      </CContainer>
+    </CNavbar>
   </>
-
-      )
+)
 }
 
 export default NavBar;

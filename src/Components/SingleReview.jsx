@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {Link, useParams} from 'react-router-dom'
 import { getSingleReview } from '../utils/utils';
+import LikeReview from './LikeReview';
 import {Button} from '@mui/material'
+
 function SingleReview() {
     const [review, setReview] = useState([])
     const {review_id} = useParams()
-    const [votes, setVotes] = useState(review.votes)
     useEffect(() => {
 getSingleReview(review_id).then((res) => {
     setReview(res)
@@ -29,9 +30,11 @@ getSingleReview(review_id).then((res) => {
               <img src={review.review_img_url} alt={review.title} />
               <p className='review-p-header'>{'Review: '}</p>
               <p className='review-body'>{review.review_body}</p>
+              <p className='review-body'>{review.created_at}</p>
               <div className='bottom-container'>
               <p className='review-p-header'>{'Votes:'}</p>
-              <Button  variant="outlined">{review.votes}</Button>
+              <LikeReview votes={review.votes} review_id={review_id}/>
+
               <p className='review-p-header'>{'Category: '}</p>
               <p className='cat'>{review.category}</p>
               </div>

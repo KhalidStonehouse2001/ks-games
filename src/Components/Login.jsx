@@ -18,9 +18,11 @@ function Login() {
 
 
   return <div className='login-container'>
-      <h3 className='login-title'>
-          Login
-      </h3>
+      <h1 className='login-title'>
+        Welcome Back to the Games Arena
+        <br />
+      </h1>
+      <h4 className='login-title'>Login to continue</h4>
       <Form onSubmit={handleSubmit} className='form'>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Username</Form.Label>
