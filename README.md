@@ -9,8 +9,8 @@
 
 # Back-End
 
-- \*\*Front-End: Hosted Verison Link: [Here](https://khalid-boardgame-app.herokuapp.com/api)
-- \*\*Front-End: Git-Hub Repo Link: [Here](https://github.com/KhalidStonehouse2001/nc-games-board.git)
+- \*\*Back-End: Hosted Verison Link: [Here](https://khalid-boardgame-app.herokuapp.com/api)
+- \*\*Back-End: Git-Hub Repo Link: [Here](https://github.com/KhalidStonehouse2001/nc-games-board.git)
 
 # Description
 
