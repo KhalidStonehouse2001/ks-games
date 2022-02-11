@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { GiCrossedSwords } from 'react-icons/gi';
 import {
@@ -16,9 +16,9 @@ import { UserContext } from '../Contexts/User';
 function NavBar() {
 	const [visible, setVisible] = useState(false);
 	const { user, setUser } = useContext(UserContext);
-	// const logout = () => {
-	// 	setUser(null);
-	// };
+	const logout = () => {
+		setUser(null);
+	};
 	return (
 		<div className='navbar'>
 			<GiCrossedSwords className='logo' />
@@ -37,9 +37,12 @@ function NavBar() {
 					<h7 className='login'>Login</h7>
 				</Link>
 			</div>
+
 			<div className='nav-profile'>
 				<h7 className='nav-user'>{user.username}</h7>
 				<img className='nav-img' src={user.avatar_url} alt='' />
+
+				{/* <h7 className='logout'>Logout</h7> */}
 			</div>
 		</div>
 	);

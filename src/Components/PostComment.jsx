@@ -26,6 +26,7 @@ function PostComment() {
 			username: '',
 			body: '',
 		});
+		navigate('/home');
 	};
 
 	return (
