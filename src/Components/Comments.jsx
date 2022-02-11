@@ -52,10 +52,7 @@ function Comments() {
 										{'Votes: '}
 										{comment.votes}
 									</CCardText>
-
-									<Button color='error' variant='contained'>
-										Delete
-									</Button>
+									<DeleteComment comment_id={comment.comment_id} />
 								</CCardBody>
 							</CCard>
 						</div>

@@ -109,7 +109,7 @@
 .single-review-card {
     
     width: 45%;
-    margin: auto;
+    margin: 30px auto;
     box-shadow: 0px 0px 4px black;
     text-align: center;
 
@@ -185,10 +185,10 @@
 }
 
 .logo {
-   color: white;
+   color: rgb(235, 235, 235);
    height: 60px;
     width: auto;
-    margin: 10px;
+    margin: 20px;
 }
 
 
@@ -415,9 +415,114 @@
 }
 
 
+
+.first-form{
+    width: 20%;
+    margin-left: 10px;
+}
+
+.second-form{
+    width: 20%;
+    margin-left: 180px;
+    margin-top: -55px;
+}
+
 .comment-card {
     margin: 30px;
     color: white;
+}
+.inputlabel{
+    margin-left: 180px;
+    margin-top: -55px;
+}
+
+.inputlabel-one{
+    margin-left: 9px;
+}
+
+.navbar{
+    display: flex;
+    margin: auto;
+    padding-right: 400px;
+    background-color: rgb(22, 21, 21);
+}
+
+.nav-container h3{
+    color: white;
+    position: absolute;
+    left: 7%;
+    top: 35%;
+}
+.home{
+    color: white;
+    position: absolute;
+    left: 23%;
+    top: 43%;
+
+}
+
+.category{
+    color: white;
+    position: absolute;
+    left: 28%;
+    top: 43%;
+}
+
+.aboutus{
+    color: white;
+    position: absolute;
+    left: 35%;
+    top: 43%;
+}
+.login{  
+     color: white;
+    position: absolute;
+    left: 41%;
+    top: 43%;
+}
+.home:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.category:hover{
+    color: black;
+    cursor: pointer;
+
+}
+
+.aboutus:hover{
+    color: black;
+    cursor: pointer;
+
+}
+.login:hover{  
+    color: black;
+    cursor: pointer;
+
+}
+.users-title{
+    font-family: 'Indie Flower', cursive;
+    margin: 10px;
+    font-size: 30px;
+
+}
+
+.nav-img {
+    width: 4%;
+    border-radius: 50px;
+    position: absolute;
+    right: 1%;
+    top: 25%;
+}
+
+.nav-user{
+    color: white;
+    position: absolute;
+    right: 6%;
+    top: 37%;
+
+
 }
 
 

@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { UserContext } from '../Contexts/User';
 import { getUser } from '../utils/utils';
 
 function Profile() {
 	const [userProfile, setUserProfile] = useState('');
+	const { user, setUser } = useContext(UserContext);
+
 	const { username } = useParams();
 	useEffect(() => {
-		getUser(username).then((res) => {
-			setUserProfile(res);
-		});
+		if (username !== undefined) {
+			getUser(username).then((res) => {
+				setUserProfile(res);
+				setUser(res);
+			});
+		}
 	}, [username]);
 	return (
 		<div className='profile-container'>

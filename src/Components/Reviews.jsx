@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getReviews } from '../utils/utils';
+import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import {
 	CCard,
 	CCardImage,
@@ -28,33 +29,34 @@ function Reviews() {
 	) : (
 		<div className='reviews_card'>
 			<h1>Reviews</h1>
-			<form>
-				<div className='select'>
-					<select
-						value={sort_by}
-						onChange={(e) => setSort_By(e.target.value)}
-						className='select'
-						name='reviews'
-					>
-						<option value='' disabled defaultValue>
-							Sort by:
-						</option>
-						<option value='votes'>Votes</option>
-						<option value='comment_count'>Comments</option>
-					</select>
-					<select
-						className='select'
+			<FormControl fullWidth>
+				<InputLabel className='inputlabel-one' id='demo-simple-select-label'>
+					Sort By
+				</InputLabel>
+				<Select
+					className='first-form'
+					value={sort_by}
+					onChange={(e) => setSort_By(e.target.value)}
+					name='reviews'
+				>
+					<MenuItem value='votes'>Votes</MenuItem>
+					<MenuItem value='comment_count'>Comments</MenuItem>
+				</Select>
+				<FormControl fullWidth>
+					<InputLabel className='inputlabel' id='demo-simple-select-label'>
+						Order By
+					</InputLabel>
+					<Select
+						className='second-form'
 						value={order_By}
 						onChange={(e) => setOrder_By(e.target.value)}
+						name='reviews'
 					>
-						<option value='' disabled defaultValue>
-							Order By
-						</option>
-						<option value='asc'>Ascending</option>
-						<option value='desc'>Descending</option>
-					</select>
-				</div>
-			</form>
+						<MenuItem value='asc'>Ascending</MenuItem>
+						<MenuItem value='desc'>Descending</MenuItem>
+					</Select>
+				</FormControl>
+			</FormControl>
 			<ul>
 				{reviews.map((review) => {
 					return (

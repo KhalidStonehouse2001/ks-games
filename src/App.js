@@ -14,7 +14,10 @@ import { UserContext } from './Contexts/User';
 import Profile from './Components/Profile';
 import DeleteComment from './Components/DeleteComment';
 function App() {
-	const [user, setUser] = useState(null);
+	const [user, setUser] = useState({
+		username: '',
+		avatar_url: '',
+	});
 	return (
 		<UserContext.Provider value={{ user, setUser }}>
 			<BrowserRouter>
@@ -22,7 +25,7 @@ function App() {
 				<Routes>
 					<Route path='/ks-games' element={<Login />} />
 					<Route path='/home' element={<Homepage />} />
-					{/* <Route path='/' element={<Homepage />} /> */}
+					<Route path='/' element={<Homepage />} />
 					<Route path='/login' element={<Login />} />
 					<Route path='/categories' element={<Categories />} />
 					<Route path='/reviews' element={<Reviews />} />

@@ -81,3 +81,9 @@ export const patchReviewById = (id) => {
 		return data.review;
 	});
 };
+
+export const deleteCommentById = (id) => {
+	return gamesApi.delete(`/comments/${id}`).catch((err) => {
+		console.log(err);
+	});
+};
