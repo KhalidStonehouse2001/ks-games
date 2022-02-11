@@ -1,52 +1,77 @@
 import React, { useEffect, useState } from 'react';
-import {Link, useParams} from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom';
 import { getSingleReview } from '../utils/utils';
 import LikeReview from './LikeReview';
-import {Button} from '@mui/material'
-
+import { Button } from '@mui/material';
+import {
+	CCard,
+	CCardImage,
+	CCardBody,
+	CCardTitle,
+	CCardText,
+	CButton,
+} from '@coreui/react';
 function SingleReview() {
-    const [review, setReview] = useState([])
-    const {review_id} = useParams()
-    useEffect(() => {
-getSingleReview(review_id).then((res) => {
-    setReview(res)
-})
-}, [review_id])
+	const [review, setReview] = useState([]);
+	const { review_id } = useParams();
+	useEffect(() => {
+		getSingleReview(review_id).then((res) => {
+			setReview(res);
+		});
+	}, [review_id]);
 
-  return (
-    <div>
-        <ul>
-       
-      {review.map((review) => {
-          return <li key={review.review_id}className='review-list'>
-              <h3 className='review-title'>{review.title}</h3>
-              <div className='underline'></div>
-              <div className='owners-div'>
-              <p className='review-p-header'>{'Designer: '}</p>
-              <p className='designer'>{review.designer}</p>
-              <p className='review-p-header'>{'Owner: '}</p>
-              <p className='owner'>{review.owner}</p>
-              </div>
-              <img src={review.review_img_url} alt={review.title} />
-              <p className='review-p-header'>{'Review: '}</p>
-              <p className='review-body'>{review.review_body}</p>
-              <p className='review-body'>{review.created_at}</p>
-              <div className='bottom-container'>
-              <p className='review-p-header'>{'Votes:'}</p>
-              <LikeReview votes={review.votes} review_id={review_id}/>
-
-              <p className='review-p-header'>{'Category: '}</p>
-              <p className='cat'>{review.category}</p>
-              </div>
-              <Link className='comment-link'  to={`/reviews/${review.review_id}/comments`}>
-              <Button variant="outlined">Load Comments</Button>
-              </Link>
-          </li>
-      })}
-       </ul>
-
-      </div>
-      )
+	return (
+		<div>
+			<ul>
+				{review.map((review) => {
+					return (
+						<CCard className='single-review-card'>
+							<CCardImage
+								className='single-review-img'
+								orientation='top'
+								src={review.review_img_url}
+							/>
+							<CCardBody className='review-card-body'>
+								<CCardTitle>{review.title}</CCardTitle>
+								<CCardText className='review-body-title'>
+									{'Review : '}
+								</CCardText>
+								<CCardText className='review-body'>
+									{review.review_body}
+								</CCardText>
+								<CCardText className='review-body-title'>
+									{'Designer : '}
+								</CCardText>
+								<CCardText>{review.designer}</CCardText>
+								<CCardText className='review-body-title'>
+									{'Owner : '}
+								</CCardText>
+								<CCardText>{review.owner}</CCardText>
+								<CCardText className='review-votes-title'>
+									{'Votes📉 : '}
+									<LikeReview votes={review.votes} review_id={review_id} />
+								</CCardText>
+								<CCardText className='review-body-title'>
+									{'Category📚 : '}
+								</CCardText>
+								<CCardText>{review.category}</CCardText>
+								<CCardText className='review-body-title'>
+									{'Comments🖋 : '}
+									<CCardText>{review.comment_count}</CCardText>
+								</CCardText>
+								<Link
+									className='comment-link'
+									to={`/reviews/${review.review_id}/comments`}
+								>
+									<Button variant='outlined'>Load Comments</Button>
+								</Link>
+							</CCardBody>
+						</CCard>
+					);
+				})}
+			</ul>
+		</div>
+	);
 }
 
 export default SingleReview;

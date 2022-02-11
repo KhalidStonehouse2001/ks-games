@@ -20,8 +20,9 @@ function App() {
 			<BrowserRouter>
 				<NavBar />
 				<Routes>
-					<Route path='/' element={<Login />} />
+					<Route path='/ks-games' element={<Login />} />
 					<Route path='/home' element={<Homepage />} />
+					{/* <Route path='/' element={<Homepage />} /> */}
 					<Route path='/login' element={<Login />} />
 					<Route path='/categories' element={<Categories />} />
 					<Route path='/reviews' element={<Reviews />} />

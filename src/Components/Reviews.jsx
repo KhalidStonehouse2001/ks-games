@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getReviews } from '../utils/utils';
-import Filter from './Filter';
 import {
 	CCard,
 	CCardImage,
@@ -59,21 +58,25 @@ function Reviews() {
 			<ul>
 				{reviews.map((review) => {
 					return (
-						<div className='review-div-card'>
-							<CCard className='review-card' style={{ width: '40rem' }}>
-								<CCardImage orientation='top' src={review.review_img_url} />
+						<div key={review.review_id} className='review-div-card'>
+							<CCard className='review-card'>
+								<CCardImage
+									className='review-img'
+									orientation='top'
+									src={review.review_img_url}
+								/>
 								<CCardBody className='review-card-body'>
 									<CCardTitle>{review.title}</CCardTitle>
 									<CCardText>
-										{'Votes: '}
+										{'Votes📉 : '}
 										{review.votes}
 									</CCardText>
 									<CCardText>
-										{'Category: '}
+										{'Category📚 : '}
 										{review.category}
 									</CCardText>
 									<CCardText>
-										{'Comments: '}
+										{'Comments🖋 : '}
 										{review.comment_count}
 									</CCardText>
 									<Link

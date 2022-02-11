@@ -22,13 +22,12 @@ function Comments() {
 	}, [review_id]);
 	return comments.length === 0 ? (
 		<div>
-			{' '}
 			<p className='loading'>No Comments </p>
 			<Link className='comment-link' to={`reviews/${review_id}/newcomments`}>
 				<Button className='post-comment-btn' variant='outlined'>
 					Post a Comment
 				</Button>
-			</Link>{' '}
+			</Link>
 		</div>
 	) : (
 		<div className='comments-container'>
@@ -37,7 +36,7 @@ function Comments() {
 				{comments.map((comment) => {
 					return (
 						<div className='comment-card'>
-							<CCard color='secondary' style={{ width: '40rem' }}>
+							<CCard color='secondary'>
 								{/* <CCardImage orientation='top' src={review.review_img_url} /> */}
 								<CCardBody className='review-card-body'>
 									{/* <CCardTitle>{review.title}</CCardTitle> */}
@@ -55,7 +54,7 @@ function Comments() {
 									</CCardText>
 
 									<Button color='error' variant='contained'>
-										Danger
+										Delete
 									</Button>
 								</CCardBody>
 							</CCard>
