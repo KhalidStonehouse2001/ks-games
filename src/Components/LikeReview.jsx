@@ -3,8 +3,7 @@ import { patchReviewById } from '../utils/utils';
 import { Button } from '@mui/material';
 
 function LikeReview({ votes, review_id }) {
-	const [likeChange, setLikeChange] = useState(0);
-
+	const [likeChange, setLikeChange] = useState(votes);
 	const reviewLike = () => {
 		patchReviewById(review_id)
 			.then(() => {
@@ -23,7 +22,7 @@ function LikeReview({ votes, review_id }) {
 				onClick={() => reviewLike()}
 				variant='outlined'
 			>
-				{votes}
+				{likeChange}
 			</Button>
 		</div>
 	);

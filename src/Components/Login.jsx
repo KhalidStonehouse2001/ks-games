@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 function Login() {
 	const [username, setUsername] = useState('');
+
 	const navigate = useNavigate();
 	const handleChange = (e) => {
 		setUsername(e.target.value);
@@ -24,7 +25,11 @@ function Login() {
 			</h1>
 			<h4 className='login-title'>Login to continue</h4>
 			<Form onSubmit={handleSubmit} className='form'>
-				<Form.Group className='mb-3' controlId='formBasicEmail'>
+				<Form.Group
+					className='form'
+					className='mb-3'
+					controlId='formBasicEmail'
+				>
 					<Form.Label>Username</Form.Label>
 					<Form.Control
 						onChange={handleChange}
@@ -37,16 +42,18 @@ function Login() {
 					Submit
 				</Button>
 			</Form>
-			<div className='underline'></div>
-			<h5 className='users-title'>Please use one of the users below</h5>
-			<ul>
-				<li>tickle122</li>
-				<li>grumpy19</li>
-				<li>happyamy2016</li>
-				<li>cooljmessy</li>
-				<li>weegembump</li>
-				<li>jessjelly</li>
-			</ul>
+			<div className='users-container'>
+				<div className='underline-users'></div>
+				<h5 className='users-title'>Please use one of the users below</h5>
+				<ul className='users-list'>
+					<li>tickle122</li>
+					<li>grumpy19</li>
+					<li>happyamy2016</li>
+					<li>cooljmessy</li>
+					<li>weegembump</li>
+					<li>jessjelly</li>
+				</ul>
+			</div>
 		</div>
 	);
 }

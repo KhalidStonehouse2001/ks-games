@@ -29,6 +29,7 @@ function Reviews() {
 	) : (
 		<div className='reviews_card'>
 			<h1>Reviews</h1>
+			<div className='underline-review'></div>
 			<FormControl fullWidth>
 				<InputLabel className='inputlabel-one' id='demo-simple-select-label'>
 					Sort By

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from '@mui/material';
 import { deleteCommentById } from '../utils/utils';
 function DeleteComment({ comment_id }) {
@@ -8,13 +8,7 @@ function DeleteComment({ comment_id }) {
 		});
 	};
 	return (
-		<Button
-			onClick={() => {
-				deleteComments();
-			}}
-			color='error'
-			variant='contained'
-		>
+		<Button onClick={() => deleteComments()} color='error' variant='contained'>
 			Delete
 		</Button>
 	);
