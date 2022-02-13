@@ -23,7 +23,7 @@ function NavBar() {
 		<div className='navbar'>
 			<GiCrossedSwords className='logo' />
 			<div className='nav-container'>
-				<h3>Games Arena</h3>
+				<h3 className='nav-title'>Games Arena</h3>
 				<Link to='/home'>
 					<h7 className='home'>Home</h7>
 				</Link>

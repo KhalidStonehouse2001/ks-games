@@ -589,7 +589,60 @@
         margin-top: 20px;
         width:90%;
     }
+    .nav-title{
+        width: 10%;
+        margin-left: 1px;
+    }
+    /* .logo{
+        margin: ;
+    } */
 
+    .nav-container{
+        margin-top: 20px;
+    }
+
+    .underline-review{
+        width: 90%;
+        margin: auto;
+    }
+
+    .home {
+        position: absolute;
+        left: 24%;
+        margin-left: 15px;
+
+    }
+
+    .category{
+    position: absolute;
+    left: 50%;
+    margin-left: 15px;
+    }
+
+    .aboutus {
+        position: absolute;
+    left: 70%;
+    margin-left: 29px;
+
+    }
+
+
+.first-form{
+    width: 30%;
+    position: absolute;
+    left: 8%;
+    margin-top: 10px;
+}
+
+.second-form{
+    width: 30%;
+    margin-left: 180px;
+    margin-top: -55px;
+}
+.inputlabel-one{
+    margin-left: 50px;
+    margin-top: 10px;
+}
     .review-card{
         width: 20rem;
     }
