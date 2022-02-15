@@ -4,7 +4,7 @@
 
 # Front-End
 
-- \*\*Front-End: Hosted Verison Link: [Here](https://jovial-thompson-99a7dc.netlify.app/home)
+- \*\*Front-End: Hosted Verison Link: [Here](https://jovial-thompson-99a7dc.netlify.app)
 - \*\*Front-End: Git-Hub Repo Link: [Here](https://github.com/KhalidStonehouse2001/ks-games.git)
 
 # Back-End
